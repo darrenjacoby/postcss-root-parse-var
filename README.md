@@ -2,7 +2,7 @@
 
 Simple PostCSS plugin to add support for **`parse-var()`**, allowing a CSS variable to be parsed from `:root` or a selector of your choice.
 
-This is useful if you are using another PostCSS plugin/function that requires a static value and differs from fallback PostCSS plugins that replace all variables with static values.
+Useful if a subsequent PostCSS plugin requires a static value to work on. This is not intended as a fallback for `var()`.
 
 ### Installation
 
@@ -50,10 +50,16 @@ postcssRange({
     --screen-lg: 75rem,
 }
 
+.parse-var {
+    font-size: range(2rem, 6rem, parse-var(--screen-md), parse-var(--screen-lg));
+}
+
 ```
 
-`parse-var(--screen-md)`
+This will parse the root variables resulting in a static value for `--screen-md` and `--screen-lg`.
 
-This will parse the variable resulting in a static value of `48rem`.
-
-`font-size: range(2rem, 6rem, parse-var(--screen-md), parse-var(--screen-lg))`
+```scss
+.parse-var {
+    font-size: range(2rem, 6rem, 48rem, 75rem);
+}
+```
