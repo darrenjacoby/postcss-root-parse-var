@@ -23,7 +23,7 @@
   "scripts": {
     "prepublishOnly": "npm test",
     "pretest": "rollup -c .rollup.js",
-    "test": "eslint *.js --cache --ignore-path .gitignore --quiet",
+    "test": "eslint *.js --cache --ignore-path .gitignore --quiet"
   },
   "engines": {
     "node": ">= 8.0.0"
