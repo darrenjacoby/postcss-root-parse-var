@@ -56,7 +56,7 @@ postcssRange({
 
 ```
 
-This will parse the root variables resulting in a static value for `--screen-md` and `--screen-lg`.
+This will parse the root custom properties resulting in a static value for `--screen-md` and `--screen-lg`.
 
 ```scss
 .parse-var {
