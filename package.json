@@ -1,0 +1,55 @@
+{
+  "name": "postcss-root-parse-var",
+  "version": "0.0.0",
+  "description": "PostCSS root parse variable",
+  "author": "Darren Jacoby",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soberwp/postcss-root-parse-var.git"
+  },
+  "homepage": "https://github.com/soberwp/postcss-root-parse-var",
+  "bugs": {
+    "url": "https://github.com/soberwp/postcss-root-parse-var/issues"
+  },
+  "main": "index.cjs.js",
+  "module": "index.es.mjs",
+  "files": [
+    "index.cjs.js",
+    "index.cjs.js.map",
+    "index.es.mjs",
+    "index.es.mjs.map"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "pretest": "rollup -c .rollup.js",
+    "test": "eslint *.js --cache --ignore-path .gitignore --quiet",
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "dependencies": {
+    "postcss": "^7.0.27"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-dev": "^2.0.0",
+    "postcss-tape": "^5.0.2",
+    "rollup": "^2.4.0",
+    "rollup-plugin-babel": "^4.4.0"
+  },
+  "eslintConfig": {
+    "extends": "dev",
+    "parser": "babel-eslint"
+  },
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "postcss-root-parse-var"
+  ]
+}
